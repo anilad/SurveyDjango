@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'surveyApp/style.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+    <div class="container">
+        {% if messages %}
+            <div class="flash">
+                {% for message in messages %}
+                    <p{% if message.success %} class="success"{% endif %}>{{ message }}</p>
+                {% endfor %}
+            </div>
+            
+        {% endif %}
+        <h3>Submitted Information</h3>
+        <p>Name: {{name}}</p>
+        <p>Dojo Location: {{location}}</p>
+        <p>Favorite Language: {{language}}</p>
+        <p>Comment(s): {{comment}}</p>
+        <form action="/goBack" method="POST">
+            {% csrf_token %}
+            <button type="submit">Go Back</button>
+        </form>
+    </div>
+</body>
+
+</html>

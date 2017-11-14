@@ -1,0 +1,41 @@
+.container{
+    margin: 0 auto;
+    width: 25%;
+    border: 1px solid black;
+    text-align: center;
+}
+.container>p{
+    text-align: left;
+    margin-left: 25%;
+}
+.container>h3{
+    text-decoration: underline;
+}
+form{
+    margin: 10px;
+}
+input, select, textarea{
+    margin: 5px;
+}
+input{
+    width: 250px;
+}
+select{
+    width: 258px;
+}
+textarea{
+    width: 255px;
+}
+button{
+    width: 265px;
+}
+ul{
+    list-style: none;
+    text-align: left;
+    margin-left: 15%;
+    color: red;
+}
+.flash{
+    background: green;
+    border: 1px solid black;
+}
